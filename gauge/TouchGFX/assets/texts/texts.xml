@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.23.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="off_Text" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">SECURITY : OFF</Translation>
+      </Text>
+      <Text Id="on_Text" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">SECURITY : ON</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_T9G6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NO POWER</Translation>
+      </Text>
+      <Text Id="__SingleUse_TTV3" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">SECURITY : OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_XHK9" Alignment="Left" TypographyId="Larger">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_T75B" Alignment="Left" TypographyId="Larger">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_R42K" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">CHANGE&#10;VIEW</Translation>
+      </Text>
+      <Text Id="__SingleUse_A67O" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pressure[mbar]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_X6MM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_A6Y5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">IN7 &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_90NX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_67WH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">IN8 &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_7KWE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_BJOS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">/ &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_370H" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_9O6I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">IN0 &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_4GPI" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_3HTH" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PPZH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">                  Warning! &#10;         Too big difference in &#10;              measurements.&#10;Check the gauge and reset the device.</Translation>
+      </Text>
+      <Text Id="__SingleUse_YDRD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Wait for power</Translation>
+      </Text>
+      <Text Id="__SingleUse_9IE7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Wait for status</Translation>
+      </Text>
+      <Text Id="__SingleUse_DRP6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">POWER SUPPLY</Translation>
+      </Text>
+      <Text Id="__SingleUse_HV30" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">STATUS</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9,a-z,A-Z" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-." WildcardCharacterRanges="0-9,a-z,A-Z" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Larger" Font="verdana.ttf" Size="80" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-." WildcardCharacterRanges="0-9,a-z,A-Z" />
+  </Typographies>
+</TextDatabase>

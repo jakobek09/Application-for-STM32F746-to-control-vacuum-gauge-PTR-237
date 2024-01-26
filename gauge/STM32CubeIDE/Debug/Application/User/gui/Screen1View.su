@@ -1,0 +1,20 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:34:6:virtual void Screen1View::tearDownScreen()	0	static
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:21:13:Screen1View::~Screen1View()	8	static
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:21:13:virtual Screen1View::~Screen1View()	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:142:14:touchgfx::BitmapId touchgfx::Bitmap::getId() const	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:332:6:virtual void Screen1View::secureOnOff()	16	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:24:1:Screen1View::Screen1View()	16	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:39:8:double Screen1View::getStat()	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:41:8:double Screen1View::getSupp()	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:348:1:cpp)	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:348:1:cpp)	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:29:6:virtual void Screen1View::setupScreen()	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:205:6:void Screen1View::secure(double)	40	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:235:6:virtual void Screen1View::changeView()	24	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:301:6:void Screen1View::showTrend(double)	48	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:43:6:virtual void Screen1View::setADC(uint32_t, uint32_t, uint32_t)	72	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:261:6:virtual void Screen1View::onOffClicked()	24	static

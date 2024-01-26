@@ -1,0 +1,3 @@
+D:/stm32Projects/gauge/TouchGFX/gui/src/model/Model.cpp:14:1:Model::Model()	0	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/model/Model.cpp:29:6:void Model::setADC()	12	static
+D:/stm32Projects/gauge/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::tick()	8	static

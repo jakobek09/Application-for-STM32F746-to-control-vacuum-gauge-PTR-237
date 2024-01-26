@@ -1,0 +1,9 @@
+D:/stm32Projects/gauge/Core/Src/main.c:980:6:StartDefaultTask	8	static
+D:/stm32Projects/gauge/Core/Src/main.c:152:6:start1	0	static
+D:/stm32Projects/gauge/Core/Src/main.c:157:6:routine	16	static
+D:/stm32Projects/gauge/Core/Src/main.c:998:6:StartTaskADC	8	static
+D:/stm32Projects/gauge/Core/Src/main.c:176:6:HAL_ADC_ConvCpltCallback	0	static
+D:/stm32Projects/gauge/Core/Src/main.c:301:6:SystemClock_Config	88	static
+D:/stm32Projects/gauge/Core/Src/main.c:186:5:main	176	static,ignoring_inline_asm
+D:/stm32Projects/gauge/Core/Src/main.c:1056:6:HAL_TIM_PeriodElapsedCallback	24	static
+D:/stm32Projects/gauge/Core/Src/main.c:1085:6:Error_Handler	0	static

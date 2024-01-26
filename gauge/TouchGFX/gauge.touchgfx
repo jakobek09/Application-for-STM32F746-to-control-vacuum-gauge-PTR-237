@@ -1,0 +1,515 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "Width": 480,
+            "Height": 272,
+            "Filename": "__generated\\alternate_theme_images_backgrounds_480x272_shattered_rain_dark.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "gauge1",
+            "X": 226,
+            "Y": 25,
+            "Width": 242,
+            "Height": 240,
+            "FileNameBackground": "gauge4.png",
+            "RotationCenterX": 120.0,
+            "RotationCenterY": 120.0,
+            "StartAngle": -113.0,
+            "EndAngle": 112.0,
+            "RangeMax": 100.0,
+            "Easing": "Linear",
+            "EasingOption": "In",
+            "FileNameNeedle": "__generated\\alternate_theme_images_widgets_gauge_medium_needles_smooth.png",
+            "NeedleRotationCenterX": 7.0,
+            "NeedleRotationCenterY": 67.0,
+            "NeedleMovingRenderingAlgorithm": "Nearest-neighbor",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "ArcCapStyle": "Butt",
+            "Alpha": 100
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "Width": 138,
+            "Height": 50,
+            "InitialStatePressed": true,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_off_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_on_action.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\round_action_text.json"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder2",
+            "X": 156,
+            "Y": 70,
+            "Width": 190,
+            "Height": 95,
+            "BorderColor": {
+              "Red": 128,
+              "Green": 54,
+              "Blue": 54
+            },
+            "BorderSize": 5,
+            "Alpha": 0
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 160,
+            "Y": 70,
+            "Width": 190,
+            "Height": 116,
+            "BorderColor": {
+              "Red": 128,
+              "Green": 54,
+              "Blue": 54
+            },
+            "BorderSize": 5,
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "statusText",
+            "X": 173,
+            "Y": 93,
+            "Width": 147,
+            "Height": 24,
+            "TextId": "__SingleUse_9IE7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0,
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "powerText",
+            "X": 173,
+            "Y": 133,
+            "Width": 147,
+            "Height": 24,
+            "TextId": "__SingleUse_YDRD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0,
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "staticText2",
+            "X": 3,
+            "Y": 169,
+            "Width": 79,
+            "Height": 24,
+            "TextId": "__SingleUse_HV30",
+            "TextRotation": "0",
+            "Alpha": 100,
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "staticText3",
+            "X": 3,
+            "Y": 197,
+            "Width": 157,
+            "Height": 24,
+            "TextId": "__SingleUse_DRP6",
+            "TextRotation": "0",
+            "Alpha": 100,
+            "AutoSize": true
+          },
+          {
+            "Type": "Circle",
+            "Name": "circleStatus",
+            "X": 58,
+            "Y": 141,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 143,
+              "Green": 130,
+              "Blue": 130
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circlePower",
+            "X": 138,
+            "Y": 169,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 143,
+              "Green": 130,
+              "Blue": 130
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "warningText",
+            "X": 158,
+            "Y": 92,
+            "Width": 195,
+            "Height": 48,
+            "TextId": "__SingleUse_PPZH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Y": 104,
+            "Width": 207,
+            "Height": 50,
+            "TextId": "__SingleUse_3HTH",
+            "TextRotation": "0",
+            "Alpha": 100,
+            "Wildcard1": {
+              "TextId": "__SingleUse_4GPI",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textBigPress",
+            "X": 58,
+            "Y": 81,
+            "Width": 410,
+            "Height": 100,
+            "Visible": false,
+            "TextId": "__SingleUse_T75B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 226,
+              "Green": 242
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XHK9",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pinVolt",
+            "X": 138,
+            "Width": 138,
+            "Height": 24,
+            "TextId": "__SingleUse_9O6I",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_370H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "statVolt",
+            "X": 255,
+            "Width": 138,
+            "Height": 24,
+            "TextId": "__SingleUse_67WH",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_90NX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "realVolt",
+            "X": 196,
+            "Width": 138,
+            "Height": 24,
+            "TextId": "__SingleUse_BJOS",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_7KWE",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "powerVolt",
+            "X": 334,
+            "Width": 138,
+            "Height": 24,
+            "TextId": "__SingleUse_A6Y5",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_X6MM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "staticText1",
+            "Y": 71,
+            "Width": 166,
+            "Height": 24,
+            "TextId": "__SingleUse_A67O",
+            "TextRotation": "0",
+            "Alpha": 100,
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "viewButton",
+            "X": 3,
+            "Y": 229,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_normal.png",
+            "TextId": "__SingleUse_R42K",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\tiny_round_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "viewButton_1",
+            "X": 110,
+            "Y": 229,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_normal.png",
+            "TextId": "__SingleUse_TTV3",
+            "ReleasedColor": {
+              "Red": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\tiny_round_normal.json"
+          },
+          {
+            "Type": "Shape",
+            "Name": "shape_up",
+            "X": 138,
+            "Y": 27,
+            "Width": 84,
+            "Height": 68,
+            "Visible": false,
+            "Color": {
+              "Red": 212,
+              "Green": 224,
+              "Blue": 34
+            },
+            "Points": [
+              {
+                "X": 40.0,
+                "Y": 20.0
+              },
+              {
+                "X": 60.0,
+                "Y": 40.0
+              },
+              {
+                "X": 20.0,
+                "Y": 40.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Shape",
+            "Name": "shape_down",
+            "X": 138,
+            "Y": 10,
+            "Width": 80,
+            "Height": 80,
+            "Visible": false,
+            "Color": {
+              "Red": 212,
+              "Green": 224,
+              "Blue": 34
+            },
+            "Points": [
+              {
+                "X": 60.0,
+                "Y": 40.0
+              },
+              {
+                "X": 40.0,
+                "Y": 60.0
+              },
+              {
+                "X": 20.0,
+                "Y": 40.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "noPowerTxt",
+            "X": 13,
+            "Y": 50,
+            "Width": 113,
+            "Height": 24,
+            "Visible": false,
+            "TextId": "__SingleUse_T9G6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onOffClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "viewButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "changeView"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "viewButton_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "secureOnOff"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "gauge",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x6",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F746G_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.23.0",
+  "CreatedBy": "4.23.0"
+}
