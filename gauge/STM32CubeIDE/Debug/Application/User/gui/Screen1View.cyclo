@@ -6,15 +6,18 @@ D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:34:6:virt
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:21:13:virtual Screen1View::~Screen1View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:142:14:touchgfx::BitmapId touchgfx::Bitmap::getId() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	2
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:332:6:virtual void Screen1View::secureOnOff()	2
 D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:24:1:Screen1View::Screen1View()	1
 D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:39:8:double Screen1View::getStat()	1
 D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:41:8:double Screen1View::getSupp()	1
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:348:1:cpp)	1
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:348:1:cpp)	1
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:473:1:cpp)	1
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:473:1:cpp)	1
 D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:29:6:virtual void Screen1View::setupScreen()	1
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:205:6:void Screen1View::secure(double)	4
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:235:6:virtual void Screen1View::changeView()	2
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:301:6:void Screen1View::showTrend(double)	7
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:43:6:virtual void Screen1View::setADC(uint32_t, uint32_t, uint32_t)	9
-D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:261:6:virtual void Screen1View::onOffClicked()	2
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:251:6:void Screen1View::secureOFF()	1
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:210:6:void Screen1View::secure(double)	10
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:268:6:virtual void Screen1View::yesButtonClicked()	1
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:433:6:virtual void Screen1View::secureOnOff()	2
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:324:6:virtual void Screen1View::changeView()	2
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:402:6:void Screen1View::showTrend(double)	7
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:43:6:virtual void Screen1View::setADC(uint32_t, uint32_t, uint32_t)	12
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:283:6:virtual void Screen1View::noButtonClicked()	1
+D:/stm32Projects/gauge/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:362:6:virtual void Screen1View::onOffClicked()	2

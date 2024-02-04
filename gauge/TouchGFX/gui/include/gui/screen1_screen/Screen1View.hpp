@@ -30,6 +30,9 @@ public:
     void secure(double pressure);
     void secureOnOff();
     void showTrend(double x);
+    void secureOFF();
+    void yesButtonClicked();
+    void noButtonClicked();
 
 
     double stat;
@@ -41,18 +44,21 @@ public:
     double suppVolt;
     double magnitude;
     double magnitude1;
+    double pressureMag = 0;
 
     int gaugeVal = 0;
     int preTimStop = 4;
     bool view = true;
     bool secureOn = false;
     bool startEr = true;
+    bool warnStat = true;
 
     char str[20];
     Unicode::UnicodeChar buff[20];
     double trend[valuesSize] = {0};
 
     int currentIndex = 0;
+    int corr = 0;
 
 protected:
 

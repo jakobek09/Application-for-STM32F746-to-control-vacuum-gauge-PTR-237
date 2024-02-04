@@ -13,6 +13,15 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_GUU2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">L</Translation>
+      </Text>
+      <Text Id="__SingleUse_EL3P" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">M</Translation>
+      </Text>
+      <Text Id="__SingleUse_YAI0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">H</Translation>
+      </Text>
       <Text Id="__SingleUse_T9G6" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">NO POWER</Translation>
       </Text>
@@ -62,7 +71,7 @@
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_PPZH" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">                  Warning! &#10;         Too big difference in &#10;              measurements.&#10;Check the gauge and reset the device.</Translation>
+        <Translation Language="GB">                  Warning! &#10;         Too big difference in &#10;              measurements.&#10;             Check the gauge.&#10;        Do you want to continue?</Translation>
       </Text>
       <Text Id="__SingleUse_YDRD" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Wait for power</Translation>

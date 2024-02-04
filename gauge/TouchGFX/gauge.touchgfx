@@ -16,11 +16,11 @@
           {
             "Type": "Gauge",
             "Name": "gauge1",
-            "X": 226,
-            "Y": 25,
+            "X": 238,
+            "Y": 12,
             "Width": 242,
             "Height": 240,
-            "FileNameBackground": "gauge4.png",
+            "FileNameBackground": "gaugee1.png",
             "RotationCenterX": 120.0,
             "RotationCenterY": 120.0,
             "StartAngle": -113.0,
@@ -42,6 +42,26 @@
             "Alpha": 100
           },
           {
+            "Type": "TextArea",
+            "Name": "textBigPress",
+            "X": 58,
+            "Y": 81,
+            "Width": 410,
+            "Height": 100,
+            "Visible": false,
+            "TextId": "__SingleUse_T75B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 226,
+              "Green": 242
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XHK9",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
             "Type": "ToggleButton",
             "Name": "toggleButton1",
             "Width": 138,
@@ -57,7 +77,7 @@
             "X": 156,
             "Y": 70,
             "Width": 190,
-            "Height": 95,
+            "Height": 111,
             "BorderColor": {
               "Red": 128,
               "Green": 54,
@@ -65,55 +85,6 @@
             },
             "BorderSize": 5,
             "Alpha": 0
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "boxWithBorder1",
-            "X": 160,
-            "Y": 70,
-            "Width": 190,
-            "Height": 116,
-            "BorderColor": {
-              "Red": 128,
-              "Green": 54,
-              "Blue": 54
-            },
-            "BorderSize": 5,
-            "Alpha": 0
-          },
-          {
-            "Type": "TextArea",
-            "Name": "statusText",
-            "X": 173,
-            "Y": 93,
-            "Width": 147,
-            "Height": 24,
-            "TextId": "__SingleUse_9IE7",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 0,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "powerText",
-            "X": 173,
-            "Y": 133,
-            "Width": 147,
-            "Height": 24,
-            "TextId": "__SingleUse_YDRD",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 0,
-            "AutoSize": true
           },
           {
             "Type": "TextArea",
@@ -177,22 +148,6 @@
           },
           {
             "Type": "TextArea",
-            "Name": "warningText",
-            "X": 158,
-            "Y": 92,
-            "Width": 195,
-            "Height": 48,
-            "TextId": "__SingleUse_PPZH",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 0
-          },
-          {
-            "Type": "TextArea",
             "Name": "textArea1",
             "Y": 104,
             "Width": 207,
@@ -207,24 +162,35 @@
             }
           },
           {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 148,
+            "Y": 70,
+            "Width": 211,
+            "Height": 111,
+            "BorderColor": {
+              "Red": 128,
+              "Green": 54,
+              "Blue": 54
+            },
+            "BorderSize": 5,
+            "Alpha": 0
+          },
+          {
             "Type": "TextArea",
-            "Name": "textBigPress",
-            "X": 58,
-            "Y": 81,
-            "Width": 410,
-            "Height": 100,
-            "Visible": false,
-            "TextId": "__SingleUse_T75B",
+            "Name": "warningText",
+            "X": 156,
+            "Y": 84,
+            "Width": 190,
+            "Height": 61,
+            "TextId": "__SingleUse_PPZH",
             "TextRotation": "0",
             "Color": {
-              "Red": 226,
-              "Green": 242
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
-            "Wildcard1": {
-              "TextId": "__SingleUse_XHK9",
-              "UseBuffer": true,
-              "BufferSize": 20
-            }
+            "Alpha": 0
           },
           {
             "Type": "TextArea",
@@ -285,7 +251,8 @@
           {
             "Type": "TextArea",
             "Name": "staticText1",
-            "Y": 71,
+            "X": -1,
+            "Y": 70,
             "Width": 166,
             "Height": 24,
             "TextId": "__SingleUse_A67O",
@@ -340,16 +307,11 @@
           {
             "Type": "Shape",
             "Name": "shape_up",
-            "X": 138,
-            "Y": 27,
+            "X": 285,
+            "Y": 181,
             "Width": 84,
             "Height": 68,
             "Visible": false,
-            "Color": {
-              "Red": 212,
-              "Green": 224,
-              "Blue": 34
-            },
             "Points": [
               {
                 "X": 40.0,
@@ -370,16 +332,11 @@
           {
             "Type": "Shape",
             "Name": "shape_down",
-            "X": 138,
-            "Y": 10,
+            "X": 348,
+            "Y": 165,
             "Width": 80,
             "Height": 80,
             "Visible": false,
-            "Color": {
-              "Red": 212,
-              "Green": 224,
-              "Blue": 34
-            },
             "Points": [
               {
                 "X": 60.0,
@@ -410,6 +367,158 @@
             "Color": {
               "Red": 255
             },
+            "AutoSize": true
+          },
+          {
+            "Type": "RadioButton",
+            "Name": "highRadio",
+            "X": 213,
+            "Y": 230,
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "Selected": true,
+            "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_action.png",
+            "FileNameSelectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+            "FileNameUnselected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off.png",
+            "FileNameUnselectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1"
+          },
+          {
+            "Type": "RadioButton",
+            "Name": "lowRadio",
+            "X": 265,
+            "Y": 231,
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_action.png",
+            "FileNameSelectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+            "FileNameUnselected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off.png",
+            "FileNameUnselectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1"
+          },
+          {
+            "Type": "RadioButton",
+            "Name": "mediumRadio",
+            "X": 239,
+            "Y": 230,
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_action.png",
+            "FileNameSelectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+            "FileNameUnselected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off.png",
+            "FileNameUnselectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_H",
+            "X": 218,
+            "Y": 249,
+            "Width": 15,
+            "Height": 24,
+            "Visible": false,
+            "TextId": "__SingleUse_YAI0",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_L",
+            "X": 273,
+            "Y": 249,
+            "Width": 11,
+            "Height": 24,
+            "Visible": false,
+            "TextId": "__SingleUse_GUU2",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_M",
+            "X": 243,
+            "Y": 249,
+            "Width": 17,
+            "Height": 24,
+            "Visible": false,
+            "LockPosition": true,
+            "TextId": "__SingleUse_EL3P",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "yesButton",
+            "X": 265,
+            "Y": 143,
+            "Width": 36,
+            "Height": 40,
+            "Visible": false,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "__generated\\icon_theme_images_action_done_30_30_48FF00.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_30_30_48FF00.svg.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "noButton",
+            "X": 203,
+            "Y": 145,
+            "Width": 30,
+            "Height": 36,
+            "Visible": false,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "__generated\\icon_theme_images_navigation_close_30_30_FF0000.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_navigation_close_30_30_FF0000.svg.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "statusText",
+            "X": 173,
+            "Y": 93,
+            "Width": 147,
+            "Height": 24,
+            "TextId": "__SingleUse_9IE7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0,
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "powerText",
+            "X": 173,
+            "Y": 133,
+            "Width": 147,
+            "Height": 24,
+            "TextId": "__SingleUse_YDRD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0,
             "AutoSize": true
           }
         ],
@@ -445,6 +554,28 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "secureOnOff"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "yesButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "yesButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "noButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "noButtonClicked"
             }
           }
         ]

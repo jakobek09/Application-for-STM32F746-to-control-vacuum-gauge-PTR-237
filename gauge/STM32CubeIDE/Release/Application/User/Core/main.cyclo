@@ -1,9 +1,9 @@
-D:/stm32Projects/gauge/Core/Src/main.c:980:6:StartDefaultTask	1
+D:/stm32Projects/gauge/Core/Src/main.c:981:6:StartDefaultTask	1
 D:/stm32Projects/gauge/Core/Src/main.c:152:6:start1	1
-D:/stm32Projects/gauge/Core/Src/main.c:157:6:routine	4
-D:/stm32Projects/gauge/Core/Src/main.c:998:6:StartTaskADC	1
-D:/stm32Projects/gauge/Core/Src/main.c:176:6:HAL_ADC_ConvCpltCallback	1
-D:/stm32Projects/gauge/Core/Src/main.c:301:6:SystemClock_Config	1
-D:/stm32Projects/gauge/Core/Src/main.c:186:5:main	3
-D:/stm32Projects/gauge/Core/Src/main.c:1056:6:HAL_TIM_PeriodElapsedCallback	8
-D:/stm32Projects/gauge/Core/Src/main.c:1085:6:Error_Handler	1
+D:/stm32Projects/gauge/Core/Src/main.c:158:6:routine	4
+D:/stm32Projects/gauge/Core/Src/main.c:999:6:StartTaskADC	1
+D:/stm32Projects/gauge/Core/Src/main.c:177:6:HAL_ADC_ConvCpltCallback	1
+D:/stm32Projects/gauge/Core/Src/main.c:302:6:SystemClock_Config	1
+D:/stm32Projects/gauge/Core/Src/main.c:187:5:main	3
+D:/stm32Projects/gauge/Core/Src/main.c:1057:6:HAL_TIM_PeriodElapsedCallback	8
+D:/stm32Projects/gauge/Core/Src/main.c:1086:6:Error_Handler	1

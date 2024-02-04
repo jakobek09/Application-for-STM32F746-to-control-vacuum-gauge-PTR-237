@@ -176,6 +176,7 @@ public:
      *
      * @return The bitmap currently displayed.
      */
+
     Bitmap getCurrentlyDisplayedBitmap() const
     {
         return (selected ? (AbstractButton::pressed ? bitmapSelectedPressed : bitmapSelected) : (AbstractButton::pressed ? bitmapUnselectedPressed : bitmapUnselected));

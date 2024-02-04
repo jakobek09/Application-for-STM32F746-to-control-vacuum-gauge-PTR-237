@@ -10,14 +10,17 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/Gauge.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/canvas/Shape.hpp>
+#include <touchgfx/widgets/RadioButton.hpp>
+#include <touchgfx/widgets/RadioButtonGroup.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -41,6 +44,14 @@ public:
     {
         // Override and implement this function in Screen1
     }
+    virtual void yesButtonClicked()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void noButtonClicked()
+    {
+        // Override and implement this function in Screen1
+    }
 
 protected:
     FrontendApplication& application() {
@@ -53,20 +64,18 @@ protected:
     touchgfx::Box __background;
     touchgfx::ScalableImage scalableImage1;
     touchgfx::Gauge gauge1;
+    touchgfx::TextAreaWithOneWildcard textBigPress;
     touchgfx::ToggleButton toggleButton1;
     touchgfx::BoxWithBorder boxWithBorder2;
-    touchgfx::BoxWithBorder boxWithBorder1;
-    touchgfx::TextArea statusText;
-    touchgfx::TextArea powerText;
     touchgfx::TextArea staticText2;
     touchgfx::TextArea staticText3;
     touchgfx::Circle circleStatus;
     touchgfx::PainterRGB565 circleStatusPainter;
     touchgfx::Circle circlePower;
     touchgfx::PainterRGB565 circlePowerPainter;
-    touchgfx::TextArea warningText;
     touchgfx::TextAreaWithOneWildcard textArea1;
-    touchgfx::TextAreaWithOneWildcard textBigPress;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::TextArea warningText;
     touchgfx::TextAreaWithOneWildcard pinVolt;
     touchgfx::TextAreaWithOneWildcard statVolt;
     touchgfx::TextAreaWithOneWildcard realVolt;
@@ -79,14 +88,25 @@ protected:
     touchgfx::Shape<3> shape_down;
     touchgfx::PainterRGB565 shape_downPainter;
     touchgfx::TextArea noPowerTxt;
+    touchgfx::RadioButtonGroup<3> radioButtonGroup1;
+    touchgfx::RadioButton highRadio;
+    touchgfx::RadioButton lowRadio;
+    touchgfx::RadioButton mediumRadio;
+    touchgfx::TextArea textArea_H;
+    touchgfx::TextArea textArea_L;
+    touchgfx::TextArea textArea_M;
+    touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  yesButton;
+    touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  noButton;
+    touchgfx::TextArea statusText;
+    touchgfx::TextArea powerText;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTAREA1_SIZE = 20;
-    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
     static const uint16_t TEXTBIGPRESS_SIZE = 20;
     touchgfx::Unicode::UnicodeChar textBigPressBuffer[TEXTBIGPRESS_SIZE];
+    static const uint16_t TEXTAREA1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
     static const uint16_t PINVOLT_SIZE = 10;
     touchgfx::Unicode::UnicodeChar pinVoltBuffer[PINVOLT_SIZE];
     static const uint16_t STATVOLT_SIZE = 10;
@@ -108,11 +128,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

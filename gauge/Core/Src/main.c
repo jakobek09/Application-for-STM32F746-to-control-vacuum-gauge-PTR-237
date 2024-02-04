@@ -1066,7 +1066,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			timStop = 2;
 		else
 			timStop = 3;
-		if(secureInc == 30)
+		if(secureInc == 40)
 			secureInc = 0;
 		secureInc++;
 		}

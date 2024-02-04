@@ -8,7 +8,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase() :
-    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &Screen1ViewBase::flexButtonCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -21,8 +22,8 @@ Screen1ViewBase::Screen1ViewBase() :
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(scalableImage1);
 
-    gauge1.setBackground(touchgfx::Bitmap(BITMAP_GAUGE4_ID));
-    gauge1.setPosition(226, 25, 242, 240);
+    gauge1.setBackground(touchgfx::Bitmap(BITMAP_GAUGEE1_ID));
+    gauge1.setPosition(238, 12, 242, 240);
     gauge1.setCenter(120, 120);
     gauge1.setStartEndAngle(-113, 112);
     gauge1.setRange(0, 100);
@@ -33,39 +34,27 @@ Screen1ViewBase::Screen1ViewBase() :
     gauge1.setAlpha(100);
     add(gauge1);
 
+    textBigPress.setPosition(58, 81, 410, 100);
+    textBigPress.setColor(touchgfx::Color::getColorFromRGB(226, 242, 0));
+    textBigPress.setLinespacing(0);
+    Unicode::snprintf(textBigPressBuffer, TEXTBIGPRESS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XHK9).getText());
+    textBigPress.setWildcard(textBigPressBuffer);
+    textBigPress.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T75B));
+    textBigPress.setVisible(false);
+    add(textBigPress);
+
     toggleButton1.setXY(0, 0);
     toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUND_TEXT_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUND_TEXT_OFF_NORMAL_ID));
     toggleButton1.forceState(true);
     toggleButton1.setAction(buttonCallback);
     add(toggleButton1);
 
-    boxWithBorder2.setPosition(156, 70, 190, 95);
+    boxWithBorder2.setPosition(156, 70, 190, 111);
     boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(128, 54, 54));
     boxWithBorder2.setBorderSize(5);
     boxWithBorder2.setAlpha(0);
     add(boxWithBorder2);
-
-    boxWithBorder1.setPosition(160, 70, 190, 116);
-    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(128, 54, 54));
-    boxWithBorder1.setBorderSize(5);
-    boxWithBorder1.setAlpha(0);
-    add(boxWithBorder1);
-
-    statusText.setXY(173, 93);
-    statusText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    statusText.setLinespacing(0);
-    statusText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9IE7));
-    statusText.setAlpha(0);
-    add(statusText);
-
-    powerText.setXY(173, 133);
-    powerText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    powerText.setLinespacing(0);
-    powerText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YDRD));
-    powerText.setAlpha(0);
-    add(powerText);
 
     staticText2.setXY(3, 169);
     staticText2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -99,13 +88,6 @@ Screen1ViewBase::Screen1ViewBase() :
     circlePower.setPainter(circlePowerPainter);
     add(circlePower);
 
-    warningText.setPosition(158, 92, 195, 48);
-    warningText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    warningText.setLinespacing(0);
-    warningText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PPZH));
-    warningText.setAlpha(0);
-    add(warningText);
-
     textArea1.setPosition(0, 104, 207, 50);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
@@ -115,14 +97,19 @@ Screen1ViewBase::Screen1ViewBase() :
     textArea1.setAlpha(100);
     add(textArea1);
 
-    textBigPress.setPosition(58, 81, 410, 100);
-    textBigPress.setColor(touchgfx::Color::getColorFromRGB(226, 242, 0));
-    textBigPress.setLinespacing(0);
-    Unicode::snprintf(textBigPressBuffer, TEXTBIGPRESS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XHK9).getText());
-    textBigPress.setWildcard(textBigPressBuffer);
-    textBigPress.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T75B));
-    textBigPress.setVisible(false);
-    add(textBigPress);
+    boxWithBorder1.setPosition(148, 70, 211, 111);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(128, 54, 54));
+    boxWithBorder1.setBorderSize(5);
+    boxWithBorder1.setAlpha(0);
+    add(boxWithBorder1);
+
+    warningText.setPosition(156, 84, 190, 61);
+    warningText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    warningText.setLinespacing(0);
+    warningText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PPZH));
+    warningText.setAlpha(0);
+    add(warningText);
 
     pinVolt.setPosition(138, 0, 138, 24);
     pinVolt.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -156,7 +143,7 @@ Screen1ViewBase::Screen1ViewBase() :
     powerVolt.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A6Y5));
     add(powerVolt);
 
-    staticText1.setXY(0, 71);
+    staticText1.setXY(-1, 70);
     staticText1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     staticText1.setLinespacing(0);
     staticText1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A67O));
@@ -179,22 +166,22 @@ Screen1ViewBase::Screen1ViewBase() :
     viewButton_1.setAction(buttonCallback);
     add(viewButton_1);
 
-    shape_up.setPosition(138, 27, 84, 68);
+    shape_up.setPosition(285, 181, 84, 68);
     shape_up.setOrigin(0.0f, 0.0f);
     shape_up.setScale(1.0f, 1.0f);
     shape_up.setAngle(0.0f);
-    shape_upPainter.setColor(touchgfx::Color::getColorFromRGB(212, 224, 34));
+    shape_upPainter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     shape_up.setPainter(shape_upPainter);
     const touchgfx::AbstractShape::ShapePoint<float> shape_upPoints[3] = { { 40.0f, 20.0f }, { 60.0f, 40.0f }, { 20.0f, 40.0f } };
     shape_up.setShape(shape_upPoints);
     shape_up.setVisible(false);
     add(shape_up);
 
-    shape_down.setPosition(138, 10, 80, 80);
+    shape_down.setPosition(348, 165, 80, 80);
     shape_down.setOrigin(0.0f, 0.0f);
     shape_down.setScale(1.0f, 1.0f);
     shape_down.setAngle(0.0f);
-    shape_downPainter.setColor(touchgfx::Color::getColorFromRGB(212, 224, 34));
+    shape_downPainter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     shape_down.setPainter(shape_downPainter);
     const touchgfx::AbstractShape::ShapePoint<float> shape_downPoints[3] = { { 60.0f, 40.0f }, { 40.0f, 60.0f }, { 20.0f, 40.0f } };
     shape_down.setShape(shape_downPoints);
@@ -207,6 +194,79 @@ Screen1ViewBase::Screen1ViewBase() :
     noPowerTxt.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9G6));
     noPowerTxt.setVisible(false);
     add(noPowerTxt);
+
+    highRadio.setXY(213, 230);
+    highRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
+    highRadio.setSelected(true);
+    highRadio.setDeselectionEnabled(false);
+    highRadio.setVisible(false);
+    radioButtonGroup1.add(highRadio);
+    add(highRadio);
+
+    lowRadio.setXY(265, 231);
+    lowRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
+    lowRadio.setSelected(false);
+    lowRadio.setDeselectionEnabled(false);
+    lowRadio.setVisible(false);
+    radioButtonGroup1.add(lowRadio);
+    add(lowRadio);
+
+    mediumRadio.setXY(239, 230);
+    mediumRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
+    mediumRadio.setSelected(false);
+    mediumRadio.setDeselectionEnabled(false);
+    mediumRadio.setVisible(false);
+    radioButtonGroup1.add(mediumRadio);
+    add(mediumRadio);
+
+    textArea_H.setXY(218, 249);
+    textArea_H.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea_H.setLinespacing(0);
+    textArea_H.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YAI0));
+    textArea_H.setVisible(false);
+    add(textArea_H);
+
+    textArea_L.setXY(273, 249);
+    textArea_L.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea_L.setLinespacing(0);
+    textArea_L.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GUU2));
+    textArea_L.setVisible(false);
+    add(textArea_L);
+
+    textArea_M.setXY(243, 249);
+    textArea_M.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea_M.setLinespacing(0);
+    textArea_M.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EL3P));
+    textArea_M.setVisible(false);
+    add(textArea_M);
+
+    yesButton.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_30_30_48FF00_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_30_30_48FF00_SVG_ID));
+    yesButton.setIconXY(0, 0);
+    yesButton.setVisible(false);
+    yesButton.setAction(flexButtonCallback);
+    yesButton.setPosition(265, 143, 36, 40);
+    add(yesButton);
+
+    noButton.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CLOSE_30_30_FF0000_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CLOSE_30_30_FF0000_SVG_ID));
+    noButton.setIconXY(0, 0);
+    noButton.setVisible(false);
+    noButton.setAction(flexButtonCallback);
+    noButton.setPosition(203, 145, 30, 36);
+    add(noButton);
+
+    statusText.setXY(173, 93);
+    statusText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    statusText.setLinespacing(0);
+    statusText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9IE7));
+    statusText.setAlpha(0);
+    add(statusText);
+
+    powerText.setXY(173, 133);
+    powerText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    powerText.setLinespacing(0);
+    powerText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YDRD));
+    powerText.setAlpha(0);
+    add(powerText);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -241,5 +301,23 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When viewButton_1 clicked call virtual function
         //Call secureOnOff
         secureOnOff();
+    }
+}
+
+void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &yesButton)
+    {
+        //Interaction4
+        //When yesButton clicked call virtual function
+        //Call yesButtonClicked
+        yesButtonClicked();
+    }
+    if (&src == &noButton)
+    {
+        //Interaction5
+        //When noButton clicked call virtual function
+        //Call noButtonClicked
+        noButtonClicked();
     }
 }
