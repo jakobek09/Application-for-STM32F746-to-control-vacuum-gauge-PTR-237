@@ -1,7 +1,7 @@
 #ifndef SCREEN1VIEW_HPP
 #define SCREEN1VIEW_HPP
 
-#define valuesSize 10
+#define valuesSize 5
 
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
@@ -30,7 +30,7 @@ public:
     void secure(double pressure);
     void secureOnOff();
     void showTrend(double x);
-    void secureOFF();
+    void secureON();
     void yesButtonClicked();
     void noButtonClicked();
 
@@ -42,8 +42,8 @@ public:
     double pVolt;
     double stVolt;
     double suppVolt;
-    double magnitude;
-    double magnitude1;
+    double power;
+    double power1;
     double pressureMag = 0;
 
     int gaugeVal = 0;

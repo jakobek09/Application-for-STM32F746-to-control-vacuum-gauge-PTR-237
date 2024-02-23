@@ -18,7 +18,6 @@ extern "C"
 	extern int timStop;
 	extern int secureInc;
 	extern bool check;
-
 }
 
 Screen1View::Screen1View()
@@ -42,18 +41,18 @@ double Screen1View::getSupp() {return supp;}
 
 void Screen1View::setADC(uint32_t pressureVolt, uint32_t statusVolt, uint32_t supplyVolt)
 {
-
-	pVolt = 3.300 * pressureVolt / 4096.000;
-	stVolt = 3.300 * statusVolt / 4096.000;
-	suppVolt = 3.300 * supplyVolt/ 4096.000;
-
-
 	memset(&pinVoltBuffer,0,PINVOLT_SIZE);
 	memset(&statVoltBuffer,0,STATVOLT_SIZE);
 	memset(&powerVoltBuffer,0,POWERVOLT_SIZE);
 	memset(&textArea1Buffer,0,TEXTAREA1_SIZE);
 	memset(&realVoltBuffer,0,REALVOLT_SIZE);
 	memset(&textBigPressBuffer,0,TEXTBIGPRESS_SIZE);
+
+
+	pVolt = 3.300 * pressureVolt / 4095.000;
+	stVolt = 3.300 * statusVolt / 4095.000;
+	suppVolt = 3.300 * supplyVolt/ 4095.000;
+
 	Unicode::snprintfFloat(pinVoltBuffer, PINVOLT_SIZE, "%.3f", pVolt);
 	pinVolt.invalidate();
 	Unicode::snprintfFloat(statVoltBuffer, STATVOLT_SIZE, "%.3f", stVolt);
@@ -227,19 +226,19 @@ void Screen1View::secure(double pressure)
 
 	if(pressure1 != 0)
 	{
-		if((pressure1 - pressure) > (0.0001 - pressure1) * sec)
+		if((pressure1 - pressure) > (0.001 - pressure1) * sec)
 		{
-			secureOFF();
+			secureON();
 		}
 		if(secureInc > 38)
 		{
 			if(pressureMag != 0)
 			{
-			magnitude = abs(ceil(log10(pressure)));
-			magnitude1 = abs(ceil(log10(pressureMag)));
-				if(abs(magnitude - magnitude1) > 0.5)
+			power = abs(ceil(log10(pressure)));
+			power1 = abs(ceil(log10(pressureMag)));
+				if(power - power1 > 1.5)
 				{
-					secureOFF();
+					secureON();
 				}
 			}
 			pressureMag = pressure;
@@ -248,7 +247,7 @@ void Screen1View::secure(double pressure)
 	pressure1 = pressure;
 }
 
-void Screen1View::secureOFF()
+void Screen1View::secureON()
 {
 	warnStat = false;
 	warningText.setAlpha(255);
@@ -404,11 +403,11 @@ void Screen1View::showTrend(double x)
 	trend[currentIndex] = x;
 	currentIndex = (currentIndex + 1) % valuesSize;
 
-	if(trend[5] != 0)
+	if(trend[4] != 0)
 	{
-		double diff1 = trend[3] - trend[1];
-		double diff2 = trend[4] - trend[2];
-		double diff3 = trend[5] - trend[3];
+		double diff1 = trend[2] - trend[0];
+		double diff2 = trend[3] - trend[1];
+		double diff3 = trend[4] - trend[2];
 
 		if(diff1 < 0 && diff2 < 0 && diff3 < 0)
 		{

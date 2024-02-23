@@ -141,13 +141,12 @@ void StartTaskADC(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 bool is_On = false;
-uint32_t uhADCxConvertedVal[300];
+uint32_t convertedVal[300];
 bool check = false;
 int timStop;
 double statMain;
 double suppMain;
 int secureInc = 0;
-
 
 void start1()
 {
@@ -157,11 +156,10 @@ void start1()
 
 void routine()
 {
-
 	if(is_On && !check)
 	{
-		HAL_ADC_Start_DMA(&hadc3, uhADCxConvertedVal, 300);
 		HAL_TIM_Base_Start_IT(&htim1);
+		HAL_ADC_Start_DMA(&hadc3, convertedVal, 300);
 		check = true;
 		HAL_GPIO_WritePin(controlPin_GPIO_Port, controlPin_Pin, GPIO_PIN_SET);
 	}
@@ -368,7 +366,7 @@ static void MX_ADC3_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc3.Instance = ADC3;
-  hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV8;
   hadc3.Init.Resolution = ADC_RESOLUTION_12B;
   hadc3.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc3.Init.ContinuousConvMode = DISABLE;

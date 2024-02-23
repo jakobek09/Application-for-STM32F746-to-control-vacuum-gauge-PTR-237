@@ -197,7 +197,7 @@ Screen1ViewBase::Screen1ViewBase() :
 
     highRadio.setXY(213, 230);
     highRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
-    highRadio.setSelected(true);
+    highRadio.setSelected(false);
     highRadio.setDeselectionEnabled(false);
     highRadio.setVisible(false);
     radioButtonGroup1.add(highRadio);
@@ -205,13 +205,13 @@ Screen1ViewBase::Screen1ViewBase() :
 
     lowRadio.setXY(265, 231);
     lowRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
-    lowRadio.setSelected(false);
+    lowRadio.setSelected(true);
     lowRadio.setDeselectionEnabled(false);
     lowRadio.setVisible(false);
     radioButtonGroup1.add(lowRadio);
     add(lowRadio);
 
-    mediumRadio.setXY(239, 230);
+    mediumRadio.setXY(240, 230);
     mediumRadio.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_OFF_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_RADIO_SMALL_ROUND_ON_PRESSED_ID));
     mediumRadio.setSelected(false);
     mediumRadio.setDeselectionEnabled(false);

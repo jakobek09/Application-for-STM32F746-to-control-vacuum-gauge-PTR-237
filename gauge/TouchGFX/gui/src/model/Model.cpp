@@ -7,7 +7,7 @@
 extern "C"
 {
 	extern osSemaphoreId_t binarySemADCHandle;
-	extern uint32_t uhADCxConvertedVal[300];
+	extern uint32_t convertedVal[300];
 }
 
 
@@ -33,9 +33,9 @@ void Model::setADC()
 
 	for(int j = 0; j<100;j++)
 	{
-		val1 += uhADCxConvertedVal[j*3];
-		val2 += uhADCxConvertedVal[j*3+1];
-		val3 += uhADCxConvertedVal[j*3+2];
+		val1 += convertedVal[j*3];
+		val2 += convertedVal[j*3+1];
+		val3 += convertedVal[j*3+2];
 	}
 	modelListener->setADC(val1/100, val2/100, val3/100);
 }
